@@ -1,0 +1,4 @@
+Main-Class: Main
+Class-Path: lib/flatlaf.jar lib/mysql-connector-j-8.2.0.jar lib/slf4j-api.jar lib/slf4j-simple.jar
+
+

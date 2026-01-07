@@ -1,0 +1,10 @@
+[2026-01-03 11:42:27] [facundo] AUDIT: ACCION: VENTA_PROCESADA | DETALLES: Total: $9600,00, Medio: Tarjeta, Items: 1, Caja: 2
+[2026-01-03 11:42:27] [facundo] AUDIT: ACCION: DETALLE_VENTA | DETALLES: Productos: [8x fewer ($9600,00)] | Total: $9600,00 | Medio: Tarjeta
+[2026-01-03 11:43:43] [facundo] AUDIT: ACCION: VENTA_PROCESADA | DETALLES: Total: $21321,00, Medio: Tarjeta, Items: 1, Caja: 2
+[2026-01-03 11:43:43] [facundo] AUDIT: ACCION: DETALLE_VENTA | DETALLES: Productos: [1x aoksfas ❌ ($21321,00)] | Total: $21321,00 | Medio: Tarjeta
+[2026-01-03 12:04:01] [facundo] AUDIT: ACCION: VENTA_PROCESADA | DETALLES: Total: $2500,00, Medio: Efectivo, Items: 1, Caja: 2
+[2026-01-03 12:04:01] [facundo] AUDIT: ACCION: DETALLE_VENTA | DETALLES: Productos: [1x coca ❌ ($2500,00)] | Total: $2500,00 | Medio: Efectivo
+[2026-01-04 17:01:36] [facundo] AUDIT: ACCION: VENTA_PROCESADA | DETALLES: Total: $2500,00, Medio: Efectivo, Items: 1, Caja: 2
+[2026-01-04 17:01:36] [facundo] AUDIT: ACCION: DETALLE_VENTA | DETALLES: Productos: [1x coca ❌ ($2500,00)] | Total: $2500,00 | Medio: Efectivo
+[2026-01-05 16:22:22] [facundo] AUDIT: ACCION: VENTA_PROCESADA | DETALLES: Total: $42642,00, Medio: Efectivo, Items: 1, Caja: 2
+[2026-01-05 16:22:22] [facundo] AUDIT: ACCION: DETALLE_VENTA | DETALLES: Productos: [2x aoksfas ❌ ($42642,00)] | Total: $42642,00 | Medio: Efectivo

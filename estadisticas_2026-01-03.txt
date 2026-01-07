@@ -1,0 +1,13 @@
+=== REPORTE DE ESTADÍSTICAS ===
+Fecha: 03/01/2026
+
+MÉTRICAS PRINCIPALES:
+- Ventas de hoy: $ 0,00
+- Ventas de ayer: $ 0,00
+- Productos vendidos: 0
+- Producto del mes: masitas (10)
+- Promedio por venta: $ 7.100,00
+- Productos con stock bajo: 0
+
+TOP PRODUCTOS:
+- Sin ventas: 0
