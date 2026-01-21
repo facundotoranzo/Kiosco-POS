@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" data-theme="app" data-page="tutorial">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VantaSoft · Tutorial</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link id="site-favicon" rel="icon" type="image/svg+xml" href="assets/vantasoft-favicon-app.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="portal.html" aria-label="Volver al portal">
+          <div class="brand__logo" aria-hidden="true">
+            <img id="brand-mark" class="brand__mark" src="assets/vantasoft-mark-app.svg" alt="" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">VantaSoft</div>
+            <div class="brand__tag">Tutorial POS</div>
+          </div>
+        </a>
+
+        <div class="header__tools" role="group" aria-label="Tema">
+          <button class="theme__btn" type="button" data-set-theme="app" data-ripple>App</button>
+          <button class="theme__btn" type="button" data-set-theme="red" data-ripple>Rojo</button>
+        </div>
+
+        <div class="header__cta">
+          <a class="btn btn--ghost" href="index.html#prueba" data-ripple>Descargar prueba</a>
+          <a class="btn btn--primary" href="index.html#planes" data-ripple>Ver planes</a>
+        </div>
+      </div>
+      <div class="header__progress" data-scrollbar></div>
+    </header>
+
+    <main class="container" style="padding: 24px 0 60px;">
+      <div class="section__header" data-reveal>
+        <h2>Guía rápida</h2>
+        <p class="muted">Pasos básicos para empezar a vender, controlar stock y cerrar caja.</p>
+      </div>
+
+      <div class="cards" style="margin-top: 12px;">
+        <div class="card card--glass" data-reveal>
+          <div class="label">1</div>
+          <div class="title">Instalar y abrir</div>
+          <div class="muted">Descargás la prueba, abrís el EXE y el sistema queda listo.</div>
+        </div>
+
+        <div class="card card--glass" data-reveal>
+          <div class="label">2</div>
+          <div class="title">Iniciar sesión</div>
+          <div class="muted">Entrás con usuario y contraseña. Si necesitás usuarios extra, se agregan por plan.</div>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top: 14px;">
+        <div class="card card--glass" data-reveal>
+          <div class="label">Ventas</div>
+          <div class="title">Cobrar rápido</div>
+          <div class="muted" style="margin-top: 6px;">Buscá productos, agregalos al carrito y elegí medio de pago.</div>
+          <div class="muted" style="margin-top: 6px;">El total y el vuelto se calculan en la misma pantalla.</div>
+        </div>
+
+        <div class="card card--glass" data-reveal>
+          <div class="label">Stock</div>
+          <div class="title">Control de productos</div>
+          <div class="muted" style="margin-top: 6px;">Alta/edición de productos, precios y stock mínimo.</div>
+          <div class="muted" style="margin-top: 6px;">Cuando hay faltantes, el sistema ayuda a detectarlos.</div>
+        </div>
+      </div>
+
+      <div class="card card--glass" style="margin-top: 14px;" data-reveal>
+        <div class="label">Caja</div>
+        <div class="title">Arqueo y cierre</div>
+        <div class="muted" style="margin-top: 6px;">Apertura, retiros, gastos y cierre con resumen de diferencias.</div>
+      </div>
+
+      <div class="card card--glass" style="margin-top: 14px;" data-reveal>
+        <div class="label">Licencia</div>
+        <div class="title">Activación mensual</div>
+        <div class="muted" style="margin-top: 6px;">Al comprar un plan se habilita por mes. Si expira, se bloquea sin borrar datos.</div>
+        <div class="muted" style="margin-top: 6px;">En “Configuración → Licencia” aparece el ID de instalación para emitir el código.</div>
+      </div>
+
+      <div class="card card--glass" style="margin-top: 14px;" data-reveal>
+        <div class="label">Vista</div>
+        <div class="title">Captura del POS</div>
+        <div class="pos-shot" style="margin-top: 12px;">
+          <img src="assets/screenshots/pos.png" alt="Vista del POS" loading="lazy" />
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

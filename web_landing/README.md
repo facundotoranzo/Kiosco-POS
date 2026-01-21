@@ -51,3 +51,18 @@ Ningún método es 100% irreversible (pueden existir contracargos o pagos revert
 - La app guarda los datos del cliente (productos, cajas, etc.) en su base local.
 - Si no se paga el mes, la licencia expira y el programa se bloquea, pero **los datos no se borran**.
 - Para volver a habilitar, se entrega un nuevo código (renovación) y sigue usando los mismos datos.
+
+## Portal de clientes (Google + chat)
+
+El portal usa Firebase (Auth + Firestore):
+
+1) Crear proyecto en Firebase Console.
+2) Activar Authentication → Google.
+3) Crear Firestore Database.
+4) Completar `firebase-config.js` con la config del proyecto.
+5) Configurar reglas (referencia en `firebase/`).
+
+Páginas:
+
+- `portal.html`: login Google + chat + solicitud de cambio de plan.
+- `admin.html`: lista de clientes + chat + estado de suscripción.

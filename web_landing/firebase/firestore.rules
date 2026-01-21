@@ -1,0 +1,40 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email in ["tuemail@gmail.com"]; 
+    }
+
+    match /users/{uid} {
+      allow read: if isSignedIn() && request.auth.uid == uid;
+      allow create, update: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    match /conversations/{clientUid} {
+      allow read: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+      allow create: if isSignedIn() && request.auth.uid == clientUid;
+      allow update: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+
+      match /messages/{messageId} {
+        allow read: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+        allow create: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+      }
+    }
+
+    match /subscriptions/{clientUid} {
+      allow read: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+      allow write: if isAdmin();
+    }
+
+    match /plan_requests/{id} {
+      allow create: if isSignedIn() && request.resource.data.clientUid == request.auth.uid;
+      allow read: if isAdmin();
+    }
+  }
+}
+
