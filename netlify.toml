@@ -1,0 +1,8 @@
+[build]
+  publish = "web_landing"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+

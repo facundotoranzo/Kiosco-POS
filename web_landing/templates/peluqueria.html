@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Plantilla · Peluquería</title>
+    <style>
+      :root{
+        --bg:#fff6fb;
+        --panel:#ffffff;
+        --text:#1a1020;
+        --muted:#6d5c73;
+        --border:rgba(26,16,32,.12);
+        --rose:#ff4d8d;
+        --rose2:#9b5cff;
+        --shadow:0 18px 44px rgba(26,16,32,.12);
+      }
+
+      *{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(900px 520px at 10% 0%,rgba(255,77,141,.22),transparent 62%),radial-gradient(900px 520px at 90% 0%,rgba(155,92,255,.18),transparent 62%),var(--bg);color:var(--text)}
+      a{color:inherit;text-decoration:none}
+      .c{width:min(1100px,calc(100% - 40px));margin:0 auto}
+
+      header{position:sticky;top:0;background:rgba(255,246,251,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:10}
+      .h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.2px}
+      .mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--rose),var(--rose2));box-shadow:0 14px 30px rgba(155,92,255,.16)}
+      nav{display:flex;gap:14px}
+      nav a{color:rgba(26,16,32,.74);font-weight:750;font-size:13px;padding:8px 10px;border-radius:999px}
+      nav a:hover{background:rgba(26,16,32,.06)}
+
+      .btn{padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:rgba(26,16,32,.03);color:rgba(26,16,32,.92);font-weight:900;display:inline-flex;align-items:center;gap:10px}
+      .btn.primary{border-color:rgba(255,77,141,.30);background:linear-gradient(135deg,var(--rose),var(--rose2));color:#fff}
+
+      .hero{padding:54px 0 22px}
+      .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+      h1{margin:10px 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.8px}
+      .muted{color:var(--muted);line-height:1.65}
+      .pill{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:900;padding:8px 10px;border-radius:999px;background:rgba(255,77,141,.10);border:1px solid rgba(255,77,141,.18)}
+
+      .card{border:1px solid var(--border);background:rgba(255,255,255,.86);border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+      .svc{display:grid;gap:10px;margin-top:12px}
+      .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 12px;border-radius:16px;border:1px solid var(--border);background:rgba(255,246,251,.65)}
+      .row b{display:block}
+      .price{font-weight:950;color:rgba(255,77,141,.95)}
+      .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+      .k{font-weight:950;margin-bottom:6px}
+      @media(max-width:920px){.grid{grid-template-columns:1fr}h1{font-size:36px}.cols{grid-template-columns:1fr}nav{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="c h">
+        <div class="brand"><div class="mark"></div>Studio V</div>
+        <nav>
+          <a href="#servicios">Servicios</a>
+          <a href="#turnos">Turnos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn primary" href="#turnos">Sacar turno</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="c grid">
+          <div>
+            <div class="pill"><span>💈</span><span>Cortes · Color · Peinados</span></div>
+            <h1>Tu salón con agenda online y estética premium</h1>
+            <p class="muted">Mostrá servicios, precios, trabajos y capturá turnos por WhatsApp o formulario.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+              <a class="btn primary" href="#turnos">Reservar turno</a>
+              <a class="btn" href="#servicios">Ver servicios</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="k" id="servicios">Servicios populares</div>
+            <div class="svc">
+              <div class="row"><div><b>Corte + lavado</b><div class="muted">45 min</div></div><div class="price">$ 7.500</div></div>
+              <div class="row"><div><b>Color completo</b><div class="muted">90 min</div></div><div class="price">$ 18.000</div></div>
+              <div class="row"><div><b>Brushing</b><div class="muted">30 min</div></div><div class="price">$ 6.000</div></div>
+              <div class="row"><div><b>Barba</b><div class="muted">20 min</div></div><div class="price">$ 5.000</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="c cols">
+          <div class="card"><div class="k">Galería</div><div class="muted">Fotos optimizadas para redes y Google.</div></div>
+          <div class="card"><div class="k">Ubicación</div><div class="muted">Mapa, horarios y cómo llegar.</div></div>
+          <div class="card"><div class="k">Reseñas</div><div class="muted">Integración con Google Reviews.</div></div>
+        </div>
+      </section>
+
+      <section id="turnos">
+        <div class="c card">
+          <div class="k">Turnos</div>
+          <div class="muted">Esta sección puede ser WhatsApp, Calendly, formulario o sistema propio.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn primary" href="#">WhatsApp</a>
+            <a class="btn" href="#">Ver horarios</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="c" style="padding:34px 0">
+          <div class="muted">Plantilla demostración · VantaSoft</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

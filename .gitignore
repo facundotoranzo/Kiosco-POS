@@ -1,0 +1,30 @@
+# IDE / tooling
+.trae/
+.kiro/
+.vscode/
+.idea/
+
+# Build outputs
+bin/
+out/
+target/
+build/
+dist*/
+
+# Java artifacts
+*.class
+*.jar
+
+# Logs / crash dumps
+*.log
+hs_err_pid*.log
+replay_pid*.log
+auditoria.log
+kiosco.log
+
+# Local databases / configs
+*.db
+*.sqlite
+db_config.properties
+session.properties
+

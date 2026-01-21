@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="VantaSoft">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2d2d"/>
+      <stop offset="1" stop-color="#ff004c"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#ff004c" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <path d="M128 14 228 72v112l-100 58-100-58V72z" fill="url(#g)" filter="url(#s)"/>
+  <path d="M128 34 210 82v92l-82 48-82-48V82z" fill="rgba(0,0,0,.22)"/>
+
+  <path d="M76 86h22l30 68 30-68h22l-42 92h-20z" fill="#0b0d12" opacity="0.96"/>
+  <path d="M92 170h72" stroke="#0b0d12" stroke-width="10" stroke-linecap="round" opacity="0.25"/>
+</svg>
+

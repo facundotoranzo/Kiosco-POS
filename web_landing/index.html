@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es" data-theme="app">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VantaSoft</title>
+    <meta name="description" content="VantaSoft: POS para kioscos, software a medida y páginas web profesionales." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#1a1d23" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VantaSoft" />
+    <meta property="og:description" content="POS para kioscos, software a medida y páginas web profesionales." />
+    <meta property="og:image" content="assets/vantasoft-mark-app.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link id="site-favicon" rel="icon" type="image/svg+xml" href="assets/vantasoft-favicon-app.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Ir al inicio">
+          <div class="brand__logo" aria-hidden="true">
+            <img id="brand-mark" class="brand__mark" src="assets/vantasoft-mark-app.svg" alt="" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">VantaSoft</div>
+            <div class="brand__tag">Software y webs para negocios reales</div>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navegación">
+          <a href="#soluciones">Soluciones</a>
+          <a href="#planes">POS</a>
+          <a href="#plantillas">Webs</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header__tools" role="group" aria-label="Tema">
+          <button class="theme__btn" type="button" data-set-theme="app" data-ripple>App</button>
+          <button class="theme__btn" type="button" data-set-theme="red" data-ripple>Rojo</button>
+        </div>
+
+        <div class="header__cta">
+          <a class="btn btn--ghost" href="#plantillas">Ver webs</a>
+          <a class="btn btn--primary" href="#planes">Ver POS</a>
+        </div>
+      </div>
+      <div class="header__progress" data-scrollbar></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__left" data-reveal>
+            <div class="pill">
+              <span class="dot"></span>
+              <span>POS para kioscos · Apps a medida · Webs</span>
+            </div>
+            <h1>
+              POS y software a medida
+              <span class="gradient">para tu negocio.</span>
+            </h1>
+            <p class="muted lead">
+              Kiosco/POS con caja y stock, automatizaciones internas y desarrollos personalizados.
+              Cuando necesitás presencia online, armamos webs por rubro o a medida.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#planes" data-ripple>Ver POS</a>
+              <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero un desarrollo a medida" data-ripple>Apps a medida</button>
+            </div>
+            <div class="hero__kpis">
+              <div class="kpi">
+                <div class="kpi__value">POS</div>
+                <div class="kpi__label muted">caja y stock</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__value">Apps</div>
+                <div class="kpi__label muted">automatizaciones</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__value">Web</div>
+                <div class="kpi__label muted">por rubro</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__right" data-reveal>
+            <div class="device" data-tilt>
+              <div class="device__top">
+                <div class="device__dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="device__title">VantaSoft</div>
+                <div class="device__badge">v1</div>
+              </div>
+              <div class="device__body">
+                <div class="pos-shot" aria-label="Captura real del POS">
+                  <img src="assets/screenshots/pos.png" alt="Vista del POS" loading="lazy" />
+                </div>
+              </div>
+              <div class="device__shine" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soluciones" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <h2>Soluciones principales</h2>
+            <p class="muted">POS listo para usar y desarrollos a medida para crecer.</p>
+          </div>
+
+          <div class="features">
+            <div class="feature" data-reveal>
+              <div class="feature__icon" aria-hidden="true">🧾</div>
+              <div class="feature__title">POS / Kiosco</div>
+              <div class="muted">Caja, stock, historial, usuarios y licencias por suscripción.</div>
+              <div class="feature__actions">
+                <a class="btn btn--ghost" href="#planes" data-ripple>Ver planes POS</a>
+                <a class="btn btn--primary" href="#prueba" data-ripple>Probar gratis</a>
+              </div>
+            </div>
+            <div class="feature" data-reveal>
+              <div class="feature__icon" aria-hidden="true">🧩</div>
+              <div class="feature__title">Software a medida</div>
+              <div class="muted">Sistemas internos, automatizaciones, integraciones y paneles.</div>
+              <div class="feature__actions">
+                <button class="btn btn--primary" type="button" data-open-modal="contacto" data-prefill="Quiero un desarrollo a medida" data-ripple>Contame tu idea</button>
+              </div>
+            </div>
+            <div class="feature" data-reveal>
+              <div class="feature__icon" aria-hidden="true">🛟</div>
+              <div class="feature__title">Soporte y mantenimiento</div>
+              <div class="muted">Actualizaciones, mejoras, backups y resolución rápida con logs.</div>
+              <div class="feature__actions">
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Necesito soporte/mantenimiento" data-ripple>Contactar</button>
+              </div>
+            </div>
+            <div class="feature" data-reveal>
+              <div class="feature__icon" aria-hidden="true">�️</div>
+              <div class="feature__title">Webs (por rubro o a medida)</div>
+              <div class="muted">Plantillas por rubro, sitio institucional o landing de venta.</div>
+              <div class="feature__actions">
+                <a class="btn btn--ghost" href="#plantillas" data-ripple>Ver plantillas web</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="prueba" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <h2>Prueba gratis 3 días</h2>
+            <p class="muted">Descargá y empezá. Al vencer, se bloquea hasta activar un plan.</p>
+          </div>
+
+          <div class="cards">
+            <div class="card card--glass" data-reveal>
+              <div class="label">Paso 1</div>
+              <div class="title">Descargá la prueba</div>
+              <div class="muted">En la versión online, este botón descarga el ZIP directamente.</div>
+              <div class="card__actions">
+                <a class="btn btn--primary" href="#" data-action="download-trial" data-ripple>Descargar prueba</a>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-ripple>Recibir por WhatsApp</button>
+              </div>
+            </div>
+            <div class="card card--glass" data-reveal>
+              <div class="label">Paso 2</div>
+              <div class="title">Usá 3 días</div>
+              <div class="muted">Sin instalar Java. Si aparece un problema, el programa genera un archivo de errores.</div>
+              <div class="card__actions">
+                <button class="btn btn--ghost" type="button" data-open-modal="como" data-ripple>Cómo activar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="planes" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <h2>Planes POS</h2>
+            <p class="muted">Pagás mensual y activás con código (por instalación). Renovación simple.</p>
+          </div>
+
+          <div class="plans">
+            <div class="plan" data-reveal data-tilt data-plan-card="MENSUAL_2">
+              <div class="plan__top">
+                <div class="plan__name">2 usuarios</div>
+                <div class="plan__price">$10.000 <span class="muted">/ mes</span></div>
+                <div class="plan__meta">2 usuarios · 2 cajas</div>
+              </div>
+              <button class="btn btn--primary" type="button" data-plan-button data-plan="MENSUAL_2" data-ripple>Comprar</button>
+            </div>
+
+            <div class="plan plan--featured" data-reveal data-tilt data-plan-card="MENSUAL_4">
+              <div class="badge">Más elegido</div>
+              <div class="plan__top">
+                <div class="plan__name">4 usuarios</div>
+                <div class="plan__price">$15.000 <span class="muted">/ mes</span></div>
+                <div class="plan__meta">4 usuarios · 4 cajas</div>
+              </div>
+              <button class="btn btn--primary" type="button" data-plan-button data-plan="MENSUAL_4" data-ripple>Comprar</button>
+            </div>
+
+            <div class="plan" data-reveal data-tilt data-plan-card="MENSUAL_10">
+              <div class="plan__top">
+                <div class="plan__name">10 usuarios</div>
+                <div class="plan__price">$25.000 <span class="muted">/ mes</span></div>
+                <div class="plan__meta">10 usuarios · 10 cajas</div>
+              </div>
+              <button class="btn btn--primary" type="button" data-plan-button data-plan="MENSUAL_10" data-ripple>Comprar</button>
+            </div>
+          </div>
+
+          <div class="card card--glass" style="margin-top: 18px;" data-reveal>
+            <div class="label">Para activar</div>
+            <div class="muted">El cliente abre “Configuración → Licencia” y te pasa el ID de instalación.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="plantillas" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <h2>Plantillas web por rubro</h2>
+            <p class="muted">Elegí una base y la adaptamos (colores, fotos, textos, secciones y dominio).</p>
+          </div>
+
+          <div class="filters" data-reveal>
+            <button class="filter is-active" type="button" data-filter="all" data-ripple>Todos</button>
+            <button class="filter" type="button" data-filter="comida" data-ripple>Gastronomía</button>
+            <button class="filter" type="button" data-filter="salud" data-ripple>Salud</button>
+            <button class="filter" type="button" data-filter="belleza" data-ripple>Belleza</button>
+            <button class="filter" type="button" data-filter="deportes" data-ripple>Deportes</button>
+            <button class="filter" type="button" data-filter="servicios" data-ripple>Servicios</button>
+            <button class="filter" type="button" data-filter="inmobiliaria" data-ripple>Inmobiliaria</button>
+          </div>
+
+          <div class="templates">
+            <article class="tpl" data-reveal data-tilt data-tpl="comida" data-tpl-src="templates/restaurante.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Restaurante</div>
+                <div class="tpl__tag">Menú + reservas</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/restaurante.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Restaurante" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+
+            <article class="tpl" data-reveal data-tilt data-tpl="belleza" data-tpl-src="templates/peluqueria.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Peluquería</div>
+                <div class="tpl__tag">Turnos + servicios</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/peluqueria.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Peluquería" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+
+            <article class="tpl" data-reveal data-tilt data-tpl="deportes" data-tpl-src="templates/gimnasio.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Gimnasio</div>
+                <div class="tpl__tag">Planes + clases</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/gimnasio.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Gimnasio" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+
+            <article class="tpl" data-reveal data-tilt data-tpl="inmobiliaria" data-tpl-src="templates/inmobiliaria.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Inmobiliaria</div>
+                <div class="tpl__tag">Propiedades + contacto</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/inmobiliaria.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Inmobiliaria" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+
+            <article class="tpl" data-reveal data-tilt data-tpl="salud" data-tpl-src="templates/clinica.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Clínica / Consultorio</div>
+                <div class="tpl__tag">Especialidades + turnos</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/clinica.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Clínica" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+
+            <article class="tpl" data-reveal data-tilt data-tpl="servicios" data-tpl-src="templates/estudio.html">
+              <div class="tpl__top">
+                <div class="tpl__name">Estudio profesional</div>
+                <div class="tpl__tag">Servicios + agenda</div>
+              </div>
+              <div class="tpl__thumb" aria-hidden="true">
+                <iframe class="tpl__preview" loading="lazy" tabindex="-1" sandbox="allow-same-origin" src="templates/estudio.html"></iframe>
+              </div>
+              <div class="tpl__actions">
+                <button class="btn btn--primary" type="button" data-open-template data-ripple>Ver demo</button>
+                <button class="btn btn--ghost" type="button" data-open-modal="contacto" data-prefill="Quiero una web tipo Estudio" data-ripple>Pedir una igual</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="card card--glass" style="margin-top: 18px;" data-reveal>
+            <div class="label">Personalización</div>
+            <div class="muted">Si no encajás en una plantilla, armamos un diseño 100% a medida.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <h2>Preguntas frecuentes</h2>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item" data-reveal>
+              <summary>¿Qué pasa cuando vence la prueba?</summary>
+              <div class="muted">La app no deja ingresar hasta activar un plan con un código.</div>
+            </details>
+            <details class="faq__item" data-reveal>
+              <summary>¿Tengo que instalar Java?</summary>
+              <div class="muted">No. El EXE ya incluye el runtime.</div>
+            </details>
+            <details class="faq__item" data-reveal>
+              <summary>¿Cómo se entregan los planes pagos?</summary>
+              <div class="muted">Se valida el pago y se envía un código de activación para ese equipo.</div>
+            </details>
+            <details class="faq__item" data-reveal>
+              <summary>¿Qué necesito para activar?</summary>
+              <div class="muted">Solo el ID de instalación. Se pega el código en “Configuración → Licencia”.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted">© VantaSoft</div>
+        <div class="muted">Contacto: WhatsApp / Email</div>
+      </div>
+    </footer>
+
+    <div class="modal" data-modal="contacto" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Contacto">
+        <div class="modal__header">
+          <div class="modal__title">Pedir demo / link</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal__body">
+          <div class="muted">Cuando lo subamos, esto se conecta a WhatsApp y al pago.</div>
+          <div class="form">
+            <label class="field">
+              <span class="field__label">Tu WhatsApp</span>
+              <input class="input" type="tel" placeholder="Ej: +54 9 11 1234-5678" />
+            </label>
+            <label class="field">
+              <span class="field__label">Mensaje</span>
+              <textarea class="input" rows="4" placeholder="Quiero el link de prueba / demo"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--ghost" type="button" data-close-modal data-ripple>Cerrar</button>
+          <button class="btn btn--primary" type="button" data-action="whatsapp" data-ripple>Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="como" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Cómo activar">
+        <div class="modal__header">
+          <div class="modal__title">Cómo activar</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal__body">
+          <ol class="steps">
+            <li>Abrí el programa.</li>
+            <li>Entrá a “Configuración → Licencia”.</li>
+            <li>Copiá el ID de instalación y envialo por WhatsApp.</li>
+            <li>Recibís el código, lo pegás y listo.</li>
+          </ol>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--primary" type="button" data-close-modal data-ripple>Entendido</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="checkout" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Comprar plan">
+        <div class="modal__header">
+          <div class="modal__title">Comprar plan</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal__body">
+          <div class="pill pill--soft">
+            <span class="dot dot--accent"></span>
+            <span data-checkout-plan>Plan</span>
+          </div>
+          <div class="muted" style="margin-top:10px;">Cuando conectemos el pago, acá se verifica y se entrega el código.</div>
+          <div class="form" style="margin-top:14px;">
+            <label class="field">
+              <span class="field__label">ID de instalación</span>
+              <input class="input" type="text" placeholder="Ej: 9f3b..." />
+            </label>
+            <label class="field">
+              <span class="field__label">Email (opcional)</span>
+              <input class="input" type="email" placeholder="tu@email.com" />
+            </label>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--ghost" type="button" data-close-modal data-ripple>Cancelar</button>
+          <button class="btn btn--primary" type="button" data-action="pay" data-ripple>Confirmar pago (demo)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="template" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel modal__panel--xl" role="dialog" aria-modal="true" aria-label="Vista previa">
+        <div class="modal__header">
+          <div class="modal__title" data-template-title>Vista previa</div>
+          <div class="modal__header-actions">
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer" data-template-open data-ripple>Abrir</a>
+            <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+          </div>
+        </div>
+        <div class="modal__body modal__body--flush">
+          <iframe class="tplframe" title="Vista previa" data-template-frame></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "VantaSoft",
+  "short_name": "VantaSoft",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1d23",
+  "theme_color": "#1a1d23",
+  "icons": [
+    {
+      "src": "assets/vantasoft-favicon-app.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

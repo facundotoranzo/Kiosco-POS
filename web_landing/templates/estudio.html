@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Plantilla · Estudio</title>
+    <style>
+      :root{--bg:#fbfcff;--panel:#ffffff;--text:#0f172a;--muted:#475569;--navy:#1f2a44;--blue:#2a6cff;--b:rgba(15,23,42,.10)}
+      *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(900px 520px at 10% 0%,rgba(42,108,255,.12),transparent 62%),radial-gradient(900px 520px at 90% 0%,rgba(31,42,68,.10),transparent 62%),var(--bg);color:var(--text)}
+      a{color:inherit;text-decoration:none}
+      .c{width:min(1100px,calc(100% - 40px));margin:0 auto}
+      header{position:sticky;top:0;background:rgba(251,252,255,.80);backdrop-filter:blur(12px);border-bottom:1px solid var(--b);z-index:10}
+      .h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.2px}
+      .mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,rgba(31,42,68,.92),rgba(42,108,255,.86))}
+      nav{display:flex;gap:14px} nav a{color:rgba(15,23,42,.74);text-decoration:none;font-weight:800;font-size:13px;padding:8px 10px;border-radius:999px}
+      nav a:hover{background:rgba(15,23,42,.06)}
+      .btn{padding:10px 12px;border-radius:14px;border:1px solid rgba(15,23,42,.12);background:rgba(15,23,42,.03);color:rgba(15,23,42,.92);font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+      .btn.primary{border-color:rgba(42,108,255,.28);background:linear-gradient(135deg,rgba(31,42,68,.92),rgba(42,108,255,.86));color:#fff}
+      .hero{padding:54px 0 22px}
+      .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+      h1{margin:0 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.8px}
+      .muted{color:var(--muted);line-height:1.65}
+      .card{border:1px solid var(--b);background:rgba(255,255,255,.86);border-radius:18px;padding:14px;box-shadow:0 18px 45px rgba(15,23,42,.08)}
+      .pill{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:900;padding:8px 10px;border-radius:999px;background:rgba(42,108,255,.10);border:1px solid rgba(42,108,255,.16);color:rgba(15,23,42,.82)}
+      .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 0 28px}
+      .k{font-weight:950;margin-bottom:6px}
+      @media(max-width:920px){.grid{grid-template-columns:1fr}h1{font-size:36px}.cols{grid-template-columns:1fr}nav{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="c h">
+        <div class="brand"><div class="mark"></div>Estudio Atlas</div>
+        <nav>
+          <a href="#servicios">Servicios</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn primary" href="#contacto">Consulta</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="c grid">
+          <div>
+            <div class="pill"><span>📌</span><span>Servicios profesionales</span></div>
+            <h1>Presencia online seria, moderna y confiable</h1>
+            <p class="muted">Perfecta para abogados, contadores, consultores, arquitectos y estudios.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+              <a class="btn primary" href="#servicios">Ver servicios</a>
+              <a class="btn" href="#contacto">Contactar</a>
+            </div>
+          </div>
+
+          <div class="card" id="contacto">
+            <div class="k">Contacto rápido</div>
+            <div class="muted">WhatsApp, email y formulario. También agenda para reuniones.</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+              <a class="btn primary" href="#">WhatsApp</a>
+              <a class="btn" href="#">Email</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c" id="servicios">
+        <div class="cols">
+          <div class="card"><div class="k">Consultoría</div><div class="muted">Reuniones y auditorías</div></div>
+          <div class="card"><div class="k">Gestión</div><div class="muted">Procesos y documentación</div></div>
+          <div class="card"><div class="k">Soporte</div><div class="muted">Acompañamiento continuo</div></div>
+        </div>
+      </section>
+
+      <section class="c" id="clientes" style="padding-bottom:36px">
+        <div class="card">
+          <div class="k">Clientes</div>
+          <div class="muted">Sección para logos, testimonios y casos de éxito.</div>
+        </div>
+        <div class="muted" style="margin-top:12px">Plantilla demostración · VantaSoft</div>
+      </section>
+    </main>
+  </body>
+</html>
