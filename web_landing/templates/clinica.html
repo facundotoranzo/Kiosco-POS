@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Plantilla · Clínica</title>
+    <style>
+      :root{
+        --bg:#f7fbff;
+        --panel:#ffffff;
+        --panel2:#f2f8ff;
+        --text:#0f1a2a;
+        --muted:#5a6b85;
+        --border:rgba(15,26,42,.12);
+        --blue:#1b6fff;
+        --blue2:#3aa7ff;
+        --green:#2e7d32;
+      }
+
+      *{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(900px 520px at 10% 0%,rgba(58,167,255,.20),transparent 60%),radial-gradient(900px 520px at 90% 0%,rgba(46,125,50,.12),transparent 60%),var(--bg);color:var(--text)}
+      a{color:inherit;text-decoration:none}
+      .c{width:min(1100px,calc(100% - 40px));margin:0 auto}
+
+      header{position:sticky;top:0;background:rgba(247,251,255,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:10}
+      .h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.2px}
+      .mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue2));box-shadow:0 14px 30px rgba(27,111,255,.18)}
+      nav{display:flex;gap:14px}
+      nav a{color:rgba(15,26,42,.78);font-weight:750;font-size:13px;padding:8px 10px;border-radius:999px}
+      nav a:hover{background:rgba(15,26,42,.06)}
+
+      .btn{padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:rgba(15,26,42,.03);color:rgba(15,26,42,.92);font-weight:850;display:inline-flex;align-items:center;gap:10px;cursor:pointer}
+      .btn.primary{border-color:rgba(27,111,255,.28);background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff}
+      .btn.green{border-color:rgba(46,125,50,.25);background:linear-gradient(135deg,rgba(46,125,50,.92),rgba(46,125,50,.72));color:#fff}
+
+      .hero{padding:54px 0 22px}
+      .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+      h1{margin:0 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.8px}
+      .muted{color:var(--muted);line-height:1.65}
+      .pill{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:850;padding:8px 10px;border-radius:999px;background:rgba(27,111,255,.08);border:1px solid rgba(27,111,255,.16);color:rgba(15,26,42,.86)}
+
+      .card{border:1px solid var(--border);background:rgba(255,255,255,.86);border-radius:18px;padding:14px;box-shadow:0 18px 45px rgba(15,26,42,.08)}
+      .card.soft{background:linear-gradient(180deg,rgba(242,248,255,.95),rgba(255,255,255,.78))}
+
+      .k{font-weight:900;margin-bottom:6px}
+      .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 0 28px}
+
+      .heroArt{height:210px;border-radius:18px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(27,111,255,.12),rgba(46,125,50,.10)),#fff;display:grid;place-items:center;position:relative;overflow:hidden}
+      .heroArt:before{content:"";position:absolute;inset:-20px;background:radial-gradient(260px 160px at 20% 20%,rgba(27,111,255,.20),transparent 60%),radial-gradient(260px 160px at 80% 40%,rgba(46,125,50,.16),transparent 60%)}
+      .heroArt svg{position:relative;z-index:1;opacity:.95}
+
+      .list{display:grid;gap:10px;margin-top:12px}
+      .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.72)}
+      .row b{display:block}
+      .tag{font-weight:850;color:rgba(27,111,255,.92)}
+
+      @media(max-width:980px){.grid{grid-template-columns:1fr}h1{font-size:36px}.cols{grid-template-columns:1fr}nav{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="c h">
+        <div class="brand"><div class="mark"></div>Clínica Central</div>
+        <nav>
+          <a href="#especialidades">Especialidades</a>
+          <a href="#turnos">Turnos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn primary" href="#turnos">Pedir turno</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="c grid">
+          <div>
+            <div class="pill"><span>🩺</span><span>Atención clínica · Estudios · Turnos</span></div>
+            <h1>Salud con un estilo limpio y confianza</h1>
+            <p class="muted">Un sitio claro, rápido y accesible para que tus pacientes encuentren especialidades, horarios y turnos sin perderse.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+              <a class="btn primary" href="#turnos">Pedir turno</a>
+              <a class="btn" href="#especialidades">Especialidades</a>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <div class="k">Atención destacada</div>
+            <div class="heroArt" aria-hidden="true">
+              <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="18" y="22" width="124" height="78" rx="16" fill="white" stroke="rgba(15,26,42,.12)"/>
+                <path d="M55 64h14v-14h22v14h14v22H91v14H69V86H55V64z" fill="url(#g)"/>
+                <circle cx="45" cy="42" r="6" fill="rgba(27,111,255,.25)"/>
+                <circle cx="64" cy="42" r="6" fill="rgba(46,125,50,.20)"/>
+                <defs>
+                  <linearGradient id="g" x1="55" y1="50" x2="105" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1b6fff"/>
+                    <stop offset="1" stop-color="#2e7d32"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="list">
+              <div class="row"><div><b>Guardia</b><div class="muted">24 hs</div></div><div class="tag">Disponible</div></div>
+              <div class="row"><div><b>Laboratorio</b><div class="muted">Lun a Sáb</div></div><div class="tag">Turnos</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c" id="especialidades">
+        <div class="cols">
+          <div class="card"><div class="k">Clínica médica</div><div class="muted">Atención general</div></div>
+          <div class="card"><div class="k">Pediatría</div><div class="muted">Niños y adolescentes</div></div>
+          <div class="card"><div class="k">Cardiología</div><div class="muted">Chequeos y control</div></div>
+        </div>
+      </section>
+
+      <section id="turnos" class="c">
+        <div class="card" style="margin-top: 18px;">
+          <div class="k">Turnos</div>
+          <div class="muted">Botones directos a WhatsApp o formulario. Integrable con calendario.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn primary" href="#">WhatsApp</a>
+            <a class="btn green" href="#">Formulario</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="c" style="padding:22px 0 36px">
+        <div class="card">
+          <div class="k">Contacto</div>
+          <div class="muted">Ubicación, horarios, guardia y atención al paciente.</div>
+        </div>
+        <div class="muted" style="margin-top:12px">Plantilla demostración · VantaSoft</div>
+      </section>
+    </main>
+  </body>
+</html>

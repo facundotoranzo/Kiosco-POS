@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Plantilla · Gimnasio</title>
+    <style>
+      :root{--bg:#07080b;--panel:#0d1016;--text:#eef3ff;--muted:#9aa6ba;--lime:#53ff7a;--cyan:#2fe0ff;--b:rgba(255,255,255,.10)}
+      *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(900px 520px at 15% 0%,rgba(83,255,122,.16),transparent 62%),radial-gradient(900px 520px at 85% 0%,rgba(47,224,255,.12),transparent 62%),linear-gradient(180deg,#07080b,#0b0d12);color:var(--text)}
+      .c{width:min(1050px,calc(100% - 40px));margin:0 auto}
+      header{position:sticky;top:0;background:rgba(7,8,11,.65);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);z-index:10}
+      .h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.2px}
+      .mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,rgba(83,255,122,.92),rgba(47,224,255,.86))}
+      nav{display:flex;gap:14px} nav a{color:rgba(242,244,255,.82);text-decoration:none;font-weight:750;font-size:13px}
+      nav a:hover{color:var(--text)}
+      .btn{padding:10px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:var(--text);font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+      .btn.primary{border-color:rgba(83,255,122,.28);background:linear-gradient(135deg,rgba(83,255,122,.92),rgba(47,224,255,.86));color:#061016}
+      .hero{padding:54px 0 22px}
+      .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}
+      h1{margin:0 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.8px}
+      .muted{color:var(--muted);line-height:1.6}
+      .pill{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:900;padding:8px 10px;border-radius:999px;background:rgba(83,255,122,.10);border:1px solid rgba(83,255,122,.18)}
+      .card{border:1px solid var(--b);background:rgba(255,255,255,.03);border-radius:18px;padding:14px}
+      .plans{display:grid;gap:10px;margin-top:12px}
+      .p{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.18)}
+      .p b{display:block} .price{font-weight:950;color:rgba(83,255,122,.92)}
+      section{padding:28px 0}
+      .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+      .k{font-weight:950;margin-bottom:6px}
+      @media(max-width:920px){.grid{grid-template-columns:1fr}h1{font-size:36px}.cols{grid-template-columns:1fr}nav{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="c h">
+        <div class="brand"><div class="mark"></div>Gym Pulse</div>
+        <nav>
+          <a href="#planes">Planes</a>
+          <a href="#clases">Clases</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn primary" href="#planes">Ver planes</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="c grid">
+          <div>
+            <div class="pill"><span>🏋️</span><span>Musculación · Funcional · Box</span></div>
+            <h1>Inscripciones y planes claros, sin vueltas</h1>
+            <p class="muted">Mostrá tus clases, horarios, entrenadores y precios. Capturá leads por WhatsApp.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+              <a class="btn primary" href="#planes">Quiero entrenar</a>
+              <a class="btn" href="#clases">Ver clases</a>
+            </div>
+          </div>
+
+          <div class="card" id="planes">
+            <div class="k">Planes</div>
+            <div class="plans">
+              <div class="p"><div><b>Mensual</b><div class="muted">Acceso completo</div></div><div class="price">$ 25.000</div></div>
+              <div class="p"><div><b>Trimestral</b><div class="muted">Ahorro 10%</div></div><div class="price">$ 67.500</div></div>
+              <div class="p"><div><b>Pack clases</b><div class="muted">10 clases</div></div><div class="price">$ 18.000</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clases">
+        <div class="c cols">
+          <div class="card"><div class="k">Funcional</div><div class="muted">Lun a Vie · 19:00</div></div>
+          <div class="card"><div class="k">Box</div><div class="muted">Mar y Jue · 20:00</div></div>
+          <div class="card"><div class="k">Yoga</div><div class="muted">Sáb · 10:00</div></div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="c card">
+          <div class="k">Contacto</div>
+          <div class="muted">Botones a WhatsApp, mapa y formulario (según tu preferencia).</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn primary" href="#">WhatsApp</a>
+            <a class="btn" href="#">Ubicación</a>
+          </div>
+        </div>
+        <div class="c" style="padding:26px 0 34px"><div class="muted">Plantilla demostración · VantaSoft</div></div>
+      </section>
+    </main>
+  </body>
+</html>
