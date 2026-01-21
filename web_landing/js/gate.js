@@ -19,6 +19,20 @@ function setGateOpen(open) {
   document.documentElement.style.overflow = open ? "hidden" : "";
 }
 
+function setHeaderUser(user) {
+  const avatarBtn = document.querySelector("[data-user-avatar]");
+  if (!avatarBtn) return;
+  const img = avatarBtn.querySelector("img");
+  if (!user) {
+    avatarBtn.hidden = true;
+    if (img) img.removeAttribute("src");
+    return;
+  }
+  const url = user.photoURL || "";
+  if (img && url) img.src = url;
+  avatarBtn.hidden = !url;
+}
+
 async function main() {
   if (!fb) return;
 
@@ -39,8 +53,8 @@ async function main() {
 
   listenAuth(fb.auth, (user) => {
     setGateOpen(!user);
+    setHeaderUser(user);
   });
 }
 
 main();
-

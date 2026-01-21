@@ -220,6 +220,25 @@ button { font: inherit; color: inherit; }
 
 .header__cta { display: flex; gap: 10px; }
 
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,.14);
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: block;
+}
+
 .header__progress {
   height: 2px;
   width: 100%;
