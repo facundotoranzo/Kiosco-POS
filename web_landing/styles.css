@@ -90,6 +90,43 @@ button { font: inherit; color: inherit; }
   mix-blend-mode: overlay;
 }
 
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 8, 11, .74);
+  backdrop-filter: blur(16px);
+}
+
+.gate__panel {
+  width: min(560px, 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(18, 20, 27, 0.78);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.gate__title {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 950;
+  letter-spacing: -0.4px;
+}
+
+.gate__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 520px) {
+  .gate__actions .btn { width: 100%; }
+}
+
 .header {
   position: sticky;
   top: 0;

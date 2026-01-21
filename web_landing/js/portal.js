@@ -2,6 +2,7 @@ import {
   initFirebase,
   listenAuth,
   signInGoogle,
+  completeRedirectSignIn,
   signOutUser,
   upsertUserProfile,
   ensureConversation,
@@ -81,6 +82,11 @@ async function main() {
   } catch (e) {
     setHidden('[data-auth="missing"]', false);
     return;
+  }
+
+  try {
+    await completeRedirectSignIn(fb.auth);
+  } catch (e) {
   }
 
   const signinBtn = qs('[data-action="signin"]');
