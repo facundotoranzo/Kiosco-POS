@@ -794,3 +794,110 @@ h2 {
   .tpl__preview { display: none; }
 }
 
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .grid2 { grid-template-columns: 1fr; }
+}
+
+.chat {
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  background: rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+.chat__messages {
+  padding: 12px;
+  height: 340px;
+  overflow: auto;
+  display: grid;
+  gap: 10px;
+}
+
+.chat__composer {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.02);
+}
+
+.msg { display: flex; justify-content: flex-start; }
+.msg--me { justify-content: flex-end; }
+
+.msg__bubble {
+  width: min(520px, 92%);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  padding: 10px 12px;
+}
+
+.msg--me .msg__bubble {
+  border-color: rgb(var(--accent1) / 0.22);
+  background: rgb(var(--accent1) / 0.10);
+}
+
+.msg__text { line-height: 1.5; white-space: pre-wrap; }
+
+.msg__file {
+  display: inline-flex;
+  margin-top: 8px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.msg__meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(156,163,175,.95);
+}
+
+.admin .chat__messages { height: 460px; }
+
+.gridAdmin {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .gridAdmin { grid-template-columns: 1fr; }
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.list__item {
+  text-align: left;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  cursor: pointer;
+}
+
+.list__item:hover { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14); }
+
+.list__item.is-active {
+  border-color: rgb(var(--accent1) / 0.28);
+  background: rgb(var(--accent1) / 0.10);
+}
+
+.list__top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.list__name { font-weight: 950; }
+.list__time { font-size: 12px; color: rgba(156,163,175,.95); white-space: nowrap; }
+.list__meta { font-size: 12px; color: rgba(156,163,175,.95); margin-top: 4px; }
+
+@media (max-width: 520px) {
+  .chat__composer { flex-wrap: wrap; }
+  .chat__composer .input { width: 100%; }
+}
+

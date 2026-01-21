@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email in ["tuemail@gmail.com"]; 
+    }
+
+    match /uploads/{clientUid}/{fileName} {
+      allow read: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+      allow write: if isSignedIn() && (request.auth.uid == clientUid || isAdmin());
+    }
+  }
+}
+

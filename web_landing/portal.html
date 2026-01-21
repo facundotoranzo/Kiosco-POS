@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es" data-theme="app">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VantaSoft · Portal</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link id="site-favicon" rel="icon" type="image/svg+xml" href="assets/vantasoft-favicon-app.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Volver a la landing">
+          <div class="brand__logo" aria-hidden="true">
+            <img id="brand-mark" class="brand__mark" src="assets/vantasoft-mark-app.svg" alt="" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">VantaSoft</div>
+            <div class="brand__tag">Portal de clientes</div>
+          </div>
+        </a>
+
+        <div class="header__tools" role="group" aria-label="Tema">
+          <button class="theme__btn" type="button" data-set-theme="app" data-ripple>App</button>
+          <button class="theme__btn" type="button" data-set-theme="red" data-ripple>Rojo</button>
+        </div>
+
+        <div class="header__cta">
+          <button class="btn btn--ghost" type="button" data-action="signout" hidden>Cerrar sesión</button>
+          <button class="btn btn--primary" type="button" data-action="signin" data-ripple>Entrar con Google</button>
+        </div>
+      </div>
+      <div class="header__progress" data-scrollbar></div>
+    </header>
+
+    <main class="container" style="padding: 24px 0 60px;">
+      <div class="card card--glass" data-auth="missing" hidden>
+        <div class="title">Configurar portal</div>
+        <div class="muted" style="margin-top: 8px;">
+          Falta la configuración de Firebase. Copiá <b>firebase-config.example.js</b> a <b>firebase-config.js</b> y completá los datos.
+        </div>
+      </div>
+
+      <section class="portal" data-auth="signedout" hidden>
+        <div class="card card--glass">
+          <div class="label">Acceso</div>
+          <div class="title">Entrá para ver tus licencias y chatear</div>
+          <div class="muted" style="margin-top: 8px;">Usamos Google para un acceso rápido y seguro.</div>
+        </div>
+      </section>
+
+      <section class="portal" data-auth="signedin" hidden>
+        <div class="grid2">
+          <div class="card card--glass">
+            <div class="label">Cuenta</div>
+            <div class="title" data-user-name></div>
+            <div class="muted" data-user-email style="margin-top: 6px;"></div>
+            <div class="muted" style="margin-top: 10px;">Este portal es tu canal directo con VantaSoft.</div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="label">Plan</div>
+            <div class="title">Estado de suscripción</div>
+            <div class="muted" style="margin-top: 6px;" data-subscription-status>Cargando…</div>
+            <div class="card__actions" style="margin-top: 12px;">
+              <select class="input" data-plan-select style="min-width: 220px;">
+                <option value="MENSUAL_2">2 usuarios</option>
+                <option value="MENSUAL_4">4 usuarios</option>
+                <option value="MENSUAL_10">10 usuarios</option>
+              </select>
+              <button class="btn btn--primary" type="button" data-request-plan data-ripple>Solicitar cambio</button>
+            </div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="label">Tutorial</div>
+            <div class="title">Guía rápida del POS</div>
+            <div class="muted" style="margin-top: 6px;">Paso a paso: caja, productos, cierres y licencia.</div>
+            <div class="card__actions" style="margin-top: 12px;">
+              <a class="btn btn--primary" href="tutorial.html" data-ripple>Abrir tutorial</a>
+              <a class="btn btn--ghost" href="index.html#planes" data-ripple>Ver planes</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--glass" style="margin-top: 14px;" data-reveal>
+          <div class="label">Chat</div>
+          <div class="title">Hablemos de tu negocio</div>
+          <div class="muted" style="margin-top: 6px;">Podés pedir presupuesto o recibir archivos del sistema.</div>
+
+          <div class="chat" style="margin-top: 12px;">
+            <div class="chat__messages" data-chat-messages></div>
+            <div class="chat__composer">
+              <input class="input" type="text" placeholder="Escribí tu mensaje" data-chat-input />
+              <label class="btn btn--ghost" style="white-space: nowrap;">
+                Adjuntar
+                <input type="file" data-chat-file hidden />
+              </label>
+              <button class="btn btn--primary" type="button" data-chat-send data-ripple>Enviar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--glass" style="margin-top: 14px;" data-reveal>
+          <div class="label">Admin</div>
+          <div class="muted">Solo disponible para tu cuenta administradora.</div>
+          <div class="card__actions" style="margin-top: 10px;">
+            <a class="btn btn--ghost" href="admin.html" data-ripple>Ir al panel</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script type="module" src="js/portal.js"></script>
+  </body>
+</html>
