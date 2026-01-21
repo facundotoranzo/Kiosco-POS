@@ -1,5 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
+  signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
   getFirestore,
   serverTimestamp,
@@ -38,8 +46,22 @@ export function createGoogleProvider() {
 
 export async function signInGoogle(auth) {
   const provider = createGoogleProvider();
+  const useRedirect =
+    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    (window.matchMedia && window.matchMedia("(max-width: 980px)").matches);
+
+  if (useRedirect) {
+    await signInWithRedirect(auth, provider);
+    return null;
+  }
+
   const res = await signInWithPopup(auth, provider);
   return res.user;
+}
+
+export async function completeRedirectSignIn(auth) {
+  const res = await getRedirectResult(auth);
+  return res ? res.user : null;
 }
 
 export async function signOutUser(auth) {

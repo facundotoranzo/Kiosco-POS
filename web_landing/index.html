@@ -56,6 +56,21 @@
       <div class="header__progress" data-scrollbar></div>
     </header>
 
+    <div class="gate" data-gate hidden>
+      <div class="gate__panel">
+        <div class="pill pill--soft">
+          <span class="dot dot--accent"></span>
+          <span>Acceso</span>
+        </div>
+        <div class="gate__title">Iniciá sesión para continuar</div>
+        <div class="muted" data-gate-msg style="margin-top: 8px;">Entrá con Google para ver tu portal, planes y soporte.</div>
+        <div class="gate__actions" style="margin-top: 14px;">
+          <button class="btn btn--primary" type="button" data-action="signin-gate" data-ripple>Entrar con Google</button>
+          <a class="btn btn--ghost" href="portal.html" data-ripple>Ir al portal</a>
+        </div>
+      </div>
+    </div>
+
     <main id="top">
       <section class="hero">
         <div class="container hero__inner">
@@ -476,6 +491,36 @@
               <span class="field__label">Email (opcional)</span>
               <input class="input" type="email" placeholder="tu@email.com" />
             </label>
+            <label class="field">
+              <span class="field__label">Número de tarjeta (Visa/Mastercard)</span>
+              <input class="input" type="tel" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" />
+            </label>
+            <label class="field">
+              <span class="field__label">Nombre del titular</span>
+              <input class="input" type="text" autocomplete="cc-name" placeholder="Nombre y apellido" />
+            </label>
+            <div class="grid2">
+              <label class="field">
+                <span class="field__label">Vencimiento (MM/AA)</span>
+                <input class="input" type="tel" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA" />
+              </label>
+              <label class="field">
+                <span class="field__label">CVV</span>
+                <input class="input" type="tel" inputmode="numeric" autocomplete="cc-csc" placeholder="XXX" />
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">DNI del titular</span>
+              <input class="input" type="tel" inputmode="numeric" placeholder="Ej: 12345678" />
+            </label>
+            <div class="card card--glass" style="margin-top: 10px;">
+              <div class="label">Transferencia</div>
+              <div class="muted" style="margin-top: 6px;">También podés pagar por transferencia bancaria.</div>
+              <label class="field" style="margin-top: 10px;">
+                <span class="field__label">CBU de Naranja X</span>
+                <input class="input" type="text" value="4530000800015278049383" readonly />
+              </label>
+            </div>
           </div>
         </div>
         <div class="modal__footer">
@@ -501,6 +546,8 @@
       </div>
     </div>
 
+    <script src="firebase-config.js"></script>
+    <script type="module" src="js/gate.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
