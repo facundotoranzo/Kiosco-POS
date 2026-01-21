@@ -54,14 +54,13 @@ Ningún método es 100% irreversible (pueden existir contracargos o pagos revert
 
 ## Portal de clientes (Google + chat)
 
-El portal usa Firebase (Auth + Firestore + Storage):
+El portal usa Firebase (Auth + Firestore):
 
 1) Crear proyecto en Firebase Console.
 2) Activar Authentication → Google.
 3) Crear Firestore Database.
-4) Activar Storage.
-5) Completar `firebase-config.js` con la config del proyecto.
-6) Configurar reglas (referencia en `firebase/`).
+4) Completar `firebase-config.js` con la config del proyecto.
+5) Configurar reglas (referencia en `firebase/`).
 
 Páginas:
 

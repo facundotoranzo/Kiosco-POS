@@ -9,8 +9,7 @@ import {
   setSubscription,
   listenConversations,
   listenMessages,
-  sendMessage,
-  uploadChatFile
+  sendMessage
 } from "./firebase.js";
 
 import "./theme.js";
@@ -92,7 +91,6 @@ async function main() {
   const titleEl = qs("[data-admin-chat-title]");
   const messagesEl = qs("[data-admin-messages]");
   const inputEl = qs("[data-admin-input]");
-  const fileEl = qs("[data-admin-file]");
   const sendBtn = qs("[data-admin-send]");
   const subEl = qs("[data-admin-sub]");
   const planSel = qs("[data-admin-plan]");
@@ -203,23 +201,17 @@ async function main() {
       if (!selectedClientUid && items[0]) selectClient(items[0]);
     });
 
-    async function sendCurrent(text, file) {
+    async function sendCurrent(text) {
       if (!selectedClientUid) return;
       const clean = String(text || "").trim();
-      if (!clean && !file) return;
+      if (!clean) return;
       const payload = {
         authorUid: user.uid,
         authorName: user.displayName || "",
         authorEmail: user.email || "",
         text: clean,
-        file: null,
         side: "admin"
       };
-
-      if (file) {
-        const up = await uploadChatFile(fb.storage, selectedClientUid, file);
-        payload.file = up;
-      }
 
       await sendMessage(fb.db, selectedClientUid, payload);
     }
@@ -242,11 +234,9 @@ async function main() {
     if (sendBtn) {
       sendBtn.onclick = async () => {
         try {
-          const file = fileEl?.files?.[0] || null;
           const text = inputEl?.value || "";
           if (inputEl) inputEl.value = "";
-          if (fileEl) fileEl.value = "";
-          await sendCurrent(text, file);
+          await sendCurrent(text);
         } catch (e) {
         }
       };
@@ -259,7 +249,7 @@ async function main() {
         try {
           const text = inputEl.value || "";
           inputEl.value = "";
-          await sendCurrent(text, null);
+          await sendCurrent(text);
         } catch (e) {
         }
       };

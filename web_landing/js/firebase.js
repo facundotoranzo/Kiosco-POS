@@ -14,12 +14,6 @@ import {
   onSnapshot,
   limit
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-import {
-  getStorage,
-  ref,
-  uploadBytes,
-  getDownloadURL
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
 function getConfig() {
   return window.VS_FIREBASE;
@@ -34,9 +28,8 @@ export function initFirebase() {
   const app = initializeApp(cfg);
   const auth = getAuth(app);
   const db = getFirestore(app);
-  const storage = getStorage(app);
 
-  return { app, auth, db, storage, cfg };
+  return { app, auth, db, cfg };
 }
 
 export function createGoogleProvider() {
@@ -138,20 +131,6 @@ export function listenConversations(db, cb) {
   });
 }
 
-export async function uploadChatFile(storage, clientUid, file) {
-  const safeName = (file.name || "archivo").replace(/[^a-zA-Z0-9._-]+/g, "_");
-  const key = `${Date.now()}_${safeName}`;
-  const r = ref(storage, `uploads/${clientUid}/${key}`);
-  await uploadBytes(r, file);
-  const url = await getDownloadURL(r);
-  return {
-    name: file.name || "archivo",
-    size: file.size || 0,
-    type: file.type || "",
-    url
-  };
-}
-
 export async function getSubscription(db, clientUid) {
   const ref = doc(db, "subscriptions", clientUid);
   const snap = await getDoc(ref);
@@ -190,4 +169,3 @@ export async function setSubscription(db, clientUid, patch) {
 
   await updateDoc(ref, data);
 }
-
