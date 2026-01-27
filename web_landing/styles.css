@@ -220,6 +220,41 @@ button { font: inherit; color: inherit; }
 
 .header__cta { display: flex; gap: 10px; }
 
+.profile { position: relative; }
+.profile__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  cursor: pointer;
+}
+.profile__btn:hover { border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.06); }
+.profile__avatar {
+  width: 28px; height: 28px; border-radius: 999px; display: inline-block;
+  border: 2px solid rgba(255,255,255,.12);
+}
+.avatar--a { background: radial-gradient(circle at 30% 30%, rgb(var(--accent1) / 0.55), rgba(255,255,255,.02)); }
+.avatar--b { background: radial-gradient(circle at 30% 30%, rgb(var(--accent2) / 0.55), rgba(255,255,255,.02)); }
+.avatar--c { background: radial-gradient(circle at 30% 30%, rgb(var(--accent3) / 0.55), rgba(255,255,255,.02)); }
+.avatar--d { background: radial-gradient(circle at 30% 30%, rgb(168 85 247 / 0.55), rgba(255,255,255,.02)); }
+.avatar--e { background: radial-gradient(circle at 30% 30%, rgb(245 158 11 / 0.55), rgba(255,255,255,.02)); }
+.avatar--f { background: radial-gradient(circle at 30% 30%, rgb(14 165 233 / 0.55), rgba(255,255,255,.02)); }
+.profile__name { font-size: 13px; color: rgba(237,240,247,.90); font-weight: 800; }
+.profile__menu {
+  position: absolute; right: 0; top: calc(100% + 8px);
+  border-radius: 14px; border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  padding: 8px; min-width: 180px; box-shadow: var(--shadow2);
+}
+.profile__item {
+  display: block; width: 100%; text-align: left; padding: 10px 12px; border-radius: 10px;
+  border: 1px solid transparent; background: transparent; color: rgba(237,240,247,.90);
+}
+.profile__item:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -830,7 +865,7 @@ h2 {
 @media (max-width: 980px) {
   .header__inner { grid-template-columns: 1fr; }
   .nav { display: none; }
-  html[data-page="landing"] .header__cta { display: none; }
+  html[data-page="landing"] .header__cta { display: flex; }
   .header__cta { justify-content: center; flex-wrap: wrap; }
   .header__tools { justify-content: center; }
   .hero__inner { grid-template-columns: 1fr; }

@@ -6,7 +6,10 @@ import {
   signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
-  signOut
+  signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
   getFirestore,
@@ -70,6 +73,21 @@ export async function signOutUser(auth) {
 
 export function listenAuth(auth, cb) {
   return onAuthStateChanged(auth, cb);
+}
+
+export async function signUpEmail(auth, email, password, displayName) {
+  const res = await createUserWithEmailAndPassword(auth, email, password);
+  try {
+    if (displayName && displayName.length >= 2) {
+      await updateProfile(res.user, { displayName });
+    }
+  } catch (e) {}
+  return res.user;
+}
+
+export async function signInEmail(auth, email, password) {
+  const res = await signInWithEmailAndPassword(auth, email, password);
+  return res.user;
 }
 
 export async function upsertUserProfile(db, user, role) {
