@@ -48,28 +48,27 @@
         </div>
 
         <div class="header__cta">
-          <a class="btn btn--ghost" href="portal.html">Portal</a>
           <a class="btn btn--ghost" href="#plantillas">Ver webs</a>
-          <a class="btn btn--primary" href="#planes">Ver POS</a>
+          <a class="btn btn--ghost" href="#planes">Ver POS</a>
+          <a class="btn btn--ghost" href="portal.html">Portal</a>
+          <button class="btn btn--ghost" type="button" data-open-modal="login" data-ripple data-auth-ui="signedout">Iniciar sesión</button>
+          <button class="btn btn--primary" type="button" data-open-modal="register" data-ripple data-auth-ui="signedout">Registrarse</button>
+          <div class="profile" data-auth-ui="signedin" hidden>
+            <button class="profile__btn" type="button" data-profile-btn>
+              <span class="profile__avatar" data-profile-avatar aria-hidden="true"></span>
+              <span class="profile__name" data-profile-name></span>
+            </button>
+            <div class="profile__menu" data-profile-menu hidden>
+              <a class="profile__item" href="portal.html">Mensajes</a>
+              <button class="profile__item" type="button" data-action="signout">Cerrar sesión</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="header__progress" data-scrollbar></div>
     </header>
 
-    <div class="gate" data-gate hidden>
-      <div class="gate__panel">
-        <div class="pill pill--soft">
-          <span class="dot dot--accent"></span>
-          <span>Acceso</span>
-        </div>
-        <div class="gate__title">Iniciá sesión para continuar</div>
-        <div class="muted" data-gate-msg style="margin-top: 8px;">Entrá con Google para ver tu portal, planes y soporte.</div>
-        <div class="gate__actions" style="margin-top: 14px;">
-          <button class="btn btn--primary" type="button" data-action="signin-gate" data-ripple>Entrar con Google</button>
-          <a class="btn btn--ghost" href="portal.html" data-ripple>Ir al portal</a>
-        </div>
-      </div>
-    </div>
+    
 
     <main id="top">
       <section class="hero">
@@ -546,8 +545,64 @@
       </div>
     </div>
 
+    <div class="modal" data-modal="login" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Iniciar sesión">
+        <div class="modal__header">
+          <div class="modal__title">Iniciar sesión</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal__body">
+          <div class="form">
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input class="input" type="email" placeholder="tu@email.com" data-login-email />
+            </label>
+            <label class="field">
+              <span class="field__label">Contraseña</span>
+              <input class="input" type="password" placeholder="••••••••" data-login-pass />
+            </label>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--ghost" type="button" data-close-modal data-ripple>Cancelar</button>
+          <button class="btn btn--primary" type="button" data-action="login" data-ripple>Entrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="register" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Registrarse">
+        <div class="modal__header">
+          <div class="modal__title">Crear cuenta</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal__body">
+          <div class="form">
+            <label class="field">
+              <span class="field__label">Nombre de usuario</span>
+              <input class="input" type="text" placeholder="Tu nombre" data-register-name />
+            </label>
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input class="input" type="email" placeholder="tu@email.com" data-register-email />
+            </label>
+            <label class="field">
+              <span class="field__label">Contraseña</span>
+              <input class="input" type="password" placeholder="••••••••" data-register-pass />
+            </label>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--ghost" type="button" data-close-modal data-ripple>Cancelar</button>
+          <button class="btn btn--primary" type="button" data-action="register" data-ripple>Crear cuenta</button>
+        </div>
+      </div>
+    </div>
+
     <script src="firebase-config.js"></script>
-    <script type="module" src="js/gate.js"></script>
+    <script type="module" src="js/auth-ui.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
