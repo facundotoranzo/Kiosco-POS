@@ -6,8 +6,10 @@ function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
 function setModalOpen(name, open) {
   const modal = qs(`[data-modal="${name}"]`);
   if (!modal) return;
-  modal.classList.toggle("is-open", !!open);
-  modal.setAttribute("aria-hidden", open ? "false" : "true");
+  const isOpen = !!open;
+  modal.classList.toggle("is-open", isOpen);
+  modal.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  document.documentElement.style.overflow = isOpen ? "hidden" : "";
 }
 
 function bindModals() {
@@ -93,6 +95,12 @@ async function main() {
       try {
         await signInEmail(fb.auth, email, pass);
         setModalOpen('login', false);
+        const anyOpen = qs('.modal.is-open');
+        if (anyOpen) {
+          anyOpen.classList.remove('is-open');
+          anyOpen.setAttribute('aria-hidden', 'true');
+        }
+        document.documentElement.style.overflow = '';
       } catch (e) {}
     });
   }
@@ -107,6 +115,12 @@ async function main() {
         const user = await signUpEmail(fb.auth, email, pass, name);
         await upsertUserProfile(fb.db, user, 'client');
         setModalOpen('register', false);
+        const anyOpen = qs('.modal.is-open');
+        if (anyOpen) {
+          anyOpen.classList.remove('is-open');
+          anyOpen.setAttribute('aria-hidden', 'true');
+        }
+        document.documentElement.style.overflow = '';
       } catch (e) {}
     });
   }
